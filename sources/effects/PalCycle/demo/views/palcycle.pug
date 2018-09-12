@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/palcycle.css')
+  body
+    .container
+        .content
+            canvas#output(width="640", height="480")
+               p Your browser does not support canvas
+      
+        .banner
+            p Palette Cycle by Oaxley
+    
+        .value
+            p The mood value is 
+                span#mood
+        .legend
+            p 
+            | U to increase the mood value
+            br
+            | N to decrease the mood value
+            br
+            | R to reset it
+    
+    script(src="/javascripts/palcycle.js")
