@@ -1,0 +1,60 @@
+# demoscene configuration file
+
+# default directories
+defaults:
+  directories: &id001
+    # the default directories for the effects, relative to the NodeJS application
+    root: sources/effects
+
+    # the directory where the demo files will be located (root + '/' + name + '/' demo)
+    demo: demo
+
+    # routes & views inside the demo directory
+    route: routes
+    view: views
+
+    # less stylesheet directory
+    # compiles stylesheets will always be in public/stylesheets
+    style: styles
+
+    # directory for static files
+    static: public
+  
+  express: &id002
+    router: index           # default router name 
+    endpoint: changeme      # endpoint should be changed per project
+
+# list of all the projects that should be taken care of by this application
+projects:
+  # eternal flames!
+  - name: Flames            # name of the project
+    directories:            # directories definition for this project
+      <<: *id001
+    express:                # NodeJS express variables
+      <<: *id002
+      endpoint: /flames     # router endpoint
+  
+  # bump mapping
+  - name: Bump
+    directories:
+      <<: *id001
+    express:
+      <<: *id002
+      endpoint: /bump
+
+  # palette cycle
+  - name: PalCycle
+    directories:
+      <<: *id001
+    express:
+      <<: *id002
+      endpoint: /palcycle
+
+  # sprite animation
+  - name: sprite
+    directories:
+      <<: *id001
+    express:
+      <<: *id002
+      endpoint: /sprite
+    
