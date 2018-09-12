@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bump.css')
+  body
+    .container
+      .content
+        canvas#output(width="320", height="200")
+          p Your browser does not support canvas
+      
+      .banner
+        p Bump Mapping by Oaxley
+    
+    script(src="/javascripts/bump.js")
