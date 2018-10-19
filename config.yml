@@ -51,7 +51,7 @@ projects:
       endpoint: /palcycle
 
   # sprite animation
-  - name: sprite
+  - name: Sprite
     directories:
       <<: *id001
     express:
