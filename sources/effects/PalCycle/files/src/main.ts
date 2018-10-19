@@ -20,7 +20,7 @@ let palcycle:PalCycle = new PalCycle(<HTMLCanvasElement> document.getElementById
 
 // set the keyboard handlers
 window.addEventListener("keypress", (event) => {
-    switch(event.keyCode) {
+    switch(event.charCode) {
         case 117:
             palcycle.increaseMood();
             break;
