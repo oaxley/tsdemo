@@ -16,6 +16,24 @@ import { SpriteAnim } from "./spriteanim"
 //------ begin
 let spriteanim:SpriteAnim = new SpriteAnim(<HTMLCanvasElement> document.getElementById("output"))
 
+// set the keyboard handlers
+window.addEventListener("keypress", (event) => {
+    switch(event.charCode) {
+        case 117:   // 'u'
+            spriteanim.addParticule()
+            break
+        case 110:   // 'n'
+            spriteanim.delParticule()
+            break
+        case 43:    // '+'
+            spriteanim.incMood()
+            break;
+        case 45:    // '-'
+            spriteanim.decMood()
+            break
+    }
+})
+
 window.onload = () => {
     spriteanim.run()
 }
