@@ -59,8 +59,9 @@ export class Sprite extends Surface {
     }
 
     // draw the sprite on another surface
-    public draw(x:number, y:number, target:Surface):void {
+    public draw(x:number, y:number, target:Surface, mode?:string):void {
         let ctx:CanvasRenderingContext2D = <CanvasRenderingContext2D> target.context()
+        ctx.globalCompositeOperation = ( mode !== undefined ) ? mode : 'source-over'
         ctx.drawImage(this.canvas(), x, y)
     }
 }
