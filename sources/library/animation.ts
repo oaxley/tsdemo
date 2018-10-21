@@ -16,6 +16,7 @@
 export abstract class Animation {
     //---- members
     private isAnimated_:boolean = false
+    protected nFrames_:number = 0
 
     //---- methods
     constructor() {
