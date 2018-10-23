@@ -57,4 +57,12 @@ projects:
     express:
       <<: *id002
       endpoint: /sprite
+  
+  # lens animation
+  - name: Lens
+    directories:
+      <<: *id001
+    express:
+      <<: *id002
+      endpoint: /lens
     
