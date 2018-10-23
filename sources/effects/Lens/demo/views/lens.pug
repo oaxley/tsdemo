@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/lens.css')
+  body
+    .container
+      .content
+        canvas#output(width="640", height="480")
+          p Your browser does not support canvas
+      
+      .banner
+        p Lens by Oaxley
+    
+    script(src="/javascripts/lens.js")
